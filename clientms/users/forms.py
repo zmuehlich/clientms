@@ -14,5 +14,5 @@ class CustomUserCreationForm(UserCreationForm):
 class CustomUserChangeForm(UserChangeForm):
 
     class Meta:
-        model = CustomerUser
+        model = CustomUser
         fields = ('username', 'email', 'department', 'employee_cell_phone')
