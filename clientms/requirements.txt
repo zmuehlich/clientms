@@ -1,2 +1,6 @@
 django==2.2
 django-crispy-forms
+psycopg2==2.9.1 #had to install this due to compatibility issues with python 3.9 and psycopg2 2.8.6
+psycopg2-binary==2.8.6 #had to revert 2.9.1 upgrade for psycopg2-binary due to compatibility issues with psycopg 2.9 and django 2.2
+gunicorn
+django-heroku
