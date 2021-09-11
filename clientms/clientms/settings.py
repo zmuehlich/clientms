@@ -24,7 +24,7 @@ SECRET_KEY = '9%gx*l2+zc90=9!c20v0#rd0ili0iyi5moy-zonyo5l$p5el)%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-AUTH_USER_MODEL = 'users.CustomerUser'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 ALLOWED_HOSTS = []
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'clients',
     'crispy_forms'
 
 ]
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'clientms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Redirect URLs for login and logout
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
