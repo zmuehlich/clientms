@@ -82,10 +82,12 @@ WSGI_APPLICATION = 'clientms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'clientms',
-        'USER': 'maverick',
-        'PASSWORD': 'zmuehlich'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd6ron87q0o0fie',
+        'USER': 'rtqitaquordehr',
+        'PASSWORD': 'b8ec2e97670d0ea36013d1915adec32312056ab26980f699628474054a223129',
+        'HOST': 'ec2-44-196-250-191.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
